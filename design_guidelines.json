@@ -1,0 +1,89 @@
+{
+  "project_name": "PremiumNameShop",
+  "theme": "dark",
+  "archetype": "5 (Luxury)",
+  "emotional_tone": "Authority, Trust, Exclusivity, High-Value Tech",
+  "colors": {
+    "background": "#050505",
+    "surface": "#121212",
+    "surface_hover": "#1A1A1A",
+    "border": "rgba(255, 255, 255, 0.08)",
+    "border_glow": "rgba(212, 175, 55, 0.3)",
+    "primary_accent": "#D4AF37",
+    "primary_accent_hover": "#F1C40F",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#A3A3A3",
+    "text_muted": "#737373",
+    "success": "#16A34A",
+    "error": "#DC2626"
+  },
+  "typography": {
+    "heading_font": "Cabinet Grotesk, sans-serif",
+    "body_font": "Manrope, sans-serif",
+    "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter font-light",
+    "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight",
+    "h3": "text-xl sm:text-2xl tracking-tight",
+    "body": "text-base leading-relaxed",
+    "small_label": "text-xs tracking-[0.2em] uppercase font-bold text-text_secondary"
+  },
+  "layout_and_spacing": {
+    "spacing_scale": "Generous spacing. Use p-6 to p-12 for cards. py-24 for marketing sections.",
+    "marketing_grid": "Bento Grid strategy (grid-cols-1 md:grid-cols-8 lg:grid-cols-12, gap-8) for featured domains.",
+    "dashboard_grid": "Control Room grid (grid-cols-1 md:grid-cols-3 lg:grid-cols-4, gap-6) for Admin Panel.",
+    "container_max_width": "max-w-7xl mx-auto px-6 md:px-12",
+    "mobile_constraints": "Images max-h-[80vh]. Fully responsive stack."
+  },
+  "surface_strategies": {
+    "header": "Crystal Glassmorphism. bg-black/60 backdrop-blur-xl border-b border-white/10. Sticky at top z-50.",
+    "cards": "Neumorphism Tactile/Glass hybrid. bg-[#121212] border border-white/10. Hover: -translate-y-1, border-[#D4AF37]/50, shadow-[0_8px_32px_rgba(212,175,55,0.1)].",
+    "buttons": "Primary: bg-[#D4AF37] text-black hover:bg-[#F1C40F] font-semibold. Secondary: bg-transparent border border-white/20 text-white hover:bg-white/5.",
+    "modals": "Solid background #0A0A0A with 1px border-white/10. Blurred overlay bg-black/80 backdrop-blur-sm."
+  },
+  "components_and_libraries": {
+    "icons": "lucide-react (Default)",
+    "ui_components": "Shadcn UI (Customized heavily for dark mode luxury).",
+    "forms": "Shadcn Form, Input, Select. bg-[#0A0A0A] border-white/10 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37].",
+    "tables": "Shadcn Table for Admin domain list. Flush borders, dense padding.",
+    "toast": "Sonner for notifications (dark theme)."
+  },
+  "media": {
+    "hero_background": {
+      "url": "https://images.pexels.com/photos/10653941/pexels-photo-10653941.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Dynamic abstract blue/dark tech pattern. Use with heavy bg-black/70 overlay so text is readable."
+    },
+    "alternative_luxury_texture": {
+      "url": "https://images.pexels.com/photos/4862953/pexels-photo-4862953.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Textured black fabric pattern. Use for subtle background noise in feature sections."
+    },
+    "broker_portrait": {
+      "url": "https://images.pexels.com/photos/28446973/pexels-photo-28446973.jpeg",
+      "description": "Professional confident businessman portrait for the Contact/About Broker section."
+    }
+  },
+  "features_and_rules": {
+    "data_testid": "MANDATORY on all interactive elements (buttons, links, form inputs, modales). Use kebab-case role-based naming.",
+    "hover_states": "MANDATORY. Text contrast must increase on hover. Use explicit hover text colors.",
+    "accessibility": "Minimum 4.5:1 contrast for text. Focus rings must be visible (focus:ring-[#D4AF37]).",
+    "domain_cards": "Display Domain Name (large, Cabinet Grotesk), Tags (e.g., 'Premium', 'Tech'), Metrics (Traffic/Length), and Price (or 'Make Offer' button).",
+    "admin_panel": "JWT Auth protected. Must include standard dashboard layouts (Sidebar + Main Content). Add/Edit/Delete actions for domains. View Offers table."
+  },
+  "contact_details_to_integrate": {
+    "email": "yazziestech@gmail.com",
+    "whatsapp": "+91 6383926053",
+    "linkedin": "https://www.linkedin.com/in/eliyas-yazzies-domains-4589a3372/",
+    "facebook": "https://www.facebook.com/profile.php?id=61581411731149"
+  },
+  "instructions_to_main_agent": [
+    "Read this JSON thoroughly. The design direction is 'Dark Luxury Tech' (Archetype 5).",
+    "Use .js and .jsx files for the React frontend. DO NOT use .ts or .tsx files.",
+    "Do NOT use pure #000000 for backgrounds, use #050505.",
+    "Do NOT use purple or teal. Use Champagne Gold (#D4AF37) as the primary CTA color.",
+    "Implement the landing page with a Bento grid for featured domains and a searchable list for the full portfolio.",
+    "Ensure the 'Request Price / Make Offer' feature opens a Shadcn Dialog modal.",
+    "Build a secure Admin panel (JWT) that manages the domains list and captures offers.",
+    "Use the provided image URLs. Do NOT use placeholder services like via.placeholder.com.",
+    "Ensure the navigation header is sticky with glassmorphism (backdrop-blur-xl bg-black/60).",
+    "All buttons and forms MUST have a data-testid attribute.",
+    "Use Tailwind CSS for styling and Radix UI / Shadcn UI components for complex interactive elements."
+  ]
+}
