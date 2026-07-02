@@ -19,8 +19,6 @@ import { CONTACTS } from "@/lib/contacts";
 
 const HERO_BG =
   "https://images.pexels.com/photos/10653941/pexels-photo-10653941.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
-const BROKER =
-  "https://images.pexels.com/photos/28446973/pexels-photo-28446973.jpeg";
 
 export default function Home() {
   const [domains, setDomains] = useState([]);
@@ -228,12 +226,39 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid gap-12 lg:grid-cols-2 items-center">
           <div className="relative">
             <div className="absolute -inset-4 bg-gold/10 blur-3xl rounded-full" />
-            <img
-              src={BROKER}
-              alt="PremiumNameShop domain broker"
-              className="relative rounded-2xl border border-white/10 w-full max-h-[520px] object-cover"
-              data-testid="broker-image"
-            />
+            <div className="relative rounded-2xl border border-white/10 bg-surface p-8 md:p-10" data-testid="portfolio-panel">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-gold" />
+                <span className="font-display text-lg font-semibold tracking-tight">
+                  Premium<span className="text-gold">Name</span>Shop
+                </span>
+              </div>
+              <div className="mt-8 grid grid-cols-2 gap-6">
+                <div className="rounded-xl border border-white/10 bg-[#0a0a0a] p-5">
+                  <p className="font-display text-3xl font-semibold text-white">{domains.length}+</p>
+                  <p className="text-xs text-neutral-500 mt-1 uppercase tracking-wider">Curated Domains</p>
+                </div>
+                <div className="rounded-xl border border-white/10 bg-[#0a0a0a] p-5">
+                  <p className="font-display text-3xl font-semibold text-white">{categories.length}</p>
+                  <p className="text-xs text-neutral-500 mt-1 uppercase tracking-wider">Categories</p>
+                </div>
+                <div className="rounded-xl border border-white/10 bg-[#0a0a0a] p-5">
+                  <p className="font-display text-3xl font-semibold text-gold">100%</p>
+                  <p className="text-xs text-neutral-500 mt-1 uppercase tracking-wider">Secure Transfer</p>
+                </div>
+                <div className="rounded-xl border border-white/10 bg-[#0a0a0a] p-5">
+                  <p className="font-display text-3xl font-semibold text-white">24h</p>
+                  <p className="text-xs text-neutral-500 mt-1 uppercase tracking-wider">Response Time</p>
+                </div>
+              </div>
+              <div className="mt-8 flex flex-wrap gap-2">
+                {["AI", "Fintech", "SaaS", "Brandable", "Premium"].map((t) => (
+                  <span key={t} className="tag-chip text-[10px] tracking-wider uppercase px-3 py-1.5 rounded-full">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
           <div>
             <p className="text-xs tracking-[0.2em] uppercase font-bold text-gold">About the Portfolio</p>
