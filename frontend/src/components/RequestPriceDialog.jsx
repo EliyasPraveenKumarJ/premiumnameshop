@@ -64,7 +64,7 @@ export default function RequestPriceDialog({ domain, open, onOpenChange }) {
             <Button
               onClick={() => onOpenChange(false)}
               data-testid="offer-close-btn"
-              className="mt-6 bg-gold text-black hover:bg-gold-hover font-semibold rounded-full"
+              className="mt-6 bg-gold text-white hover:bg-gold-hover font-semibold rounded-full"
             >
               Close
             </Button>
@@ -135,7 +135,7 @@ export default function RequestPriceDialog({ domain, open, onOpenChange }) {
                 type="submit"
                 disabled={loading}
                 data-testid="offer-submit-btn"
-                className="w-full bg-gold text-black hover:bg-gold-hover font-semibold rounded-full"
+                className="w-full bg-gold text-white hover:bg-gold-hover font-semibold rounded-full"
               >
                 {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : "Send Inquiry"}
               </Button>

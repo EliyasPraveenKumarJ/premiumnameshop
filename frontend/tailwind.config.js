@@ -18,8 +18,8 @@ module.exports = {
       },
       colors: {
         gold: {
-          DEFAULT: '#d4af37',
-          hover: '#f1c40f',
+          DEFAULT: '#2f6feb',
+          hover: '#4f8bff',
         },
         obsidian: '#050505',
         surface: '#121212',

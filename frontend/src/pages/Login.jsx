@@ -78,7 +78,7 @@ export default function Login() {
               type="submit"
               disabled={loading}
               data-testid="login-submit-btn"
-              className="w-full h-11 bg-gold text-black hover:bg-gold-hover font-semibold rounded-full"
+              className="w-full h-11 bg-gold text-white hover:bg-gold-hover font-semibold rounded-full"
             >
               {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : "Sign In"}
             </Button>

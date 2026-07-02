@@ -91,7 +91,7 @@ export default function Home() {
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <a href="#portfolio">
-                <Button data-testid="hero-browse-btn" className="bg-gold text-black hover:bg-gold-hover font-semibold rounded-full px-7 h-12">
+                <Button data-testid="hero-browse-btn" className="bg-gold text-white hover:bg-gold-hover font-semibold rounded-full px-7 h-12">
                   Explore Portfolio <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </a>

@@ -167,13 +167,13 @@ export default function Admin() {
 
         <Tabs defaultValue="domains">
           <TabsList className="bg-surface border border-white/10">
-            <TabsTrigger value="domains" data-testid="tab-domains" className="data-[state=active]:bg-gold data-[state=active]:text-black">
+            <TabsTrigger value="domains" data-testid="tab-domains" className="data-[state=active]:bg-gold data-[state=active]:text-white">
               <LayoutGrid className="w-4 h-4 mr-2" /> Domains
             </TabsTrigger>
-            <TabsTrigger value="inquiries" data-testid="tab-inquiries" className="data-[state=active]:bg-gold data-[state=active]:text-black">
+            <TabsTrigger value="inquiries" data-testid="tab-inquiries" className="data-[state=active]:bg-gold data-[state=active]:text-white">
               <Inbox className="w-4 h-4 mr-2" /> Inquiries
               {(stats.new_offers ?? 0) > 0 && (
-                <span className="ml-2 text-[10px] bg-gold text-black rounded-full px-1.5 py-0.5 font-bold">{stats.new_offers}</span>
+                <span className="ml-2 text-[10px] bg-gold text-white rounded-full px-1.5 py-0.5 font-bold">{stats.new_offers}</span>
               )}
             </TabsTrigger>
           </TabsList>
@@ -182,7 +182,7 @@ export default function Admin() {
           <TabsContent value="domains" className="mt-8">
             <div className="flex justify-between items-center mb-6">
               <h2 className="font-display text-xl">Domain Portfolio ({domains.length})</h2>
-              <Button data-testid="add-domain-btn" onClick={openAdd} className="bg-gold text-black hover:bg-gold-hover font-semibold rounded-full">
+              <Button data-testid="add-domain-btn" onClick={openAdd} className="bg-gold text-white hover:bg-gold-hover font-semibold rounded-full">
                 <Plus className="w-4 h-4 mr-1" /> Add Domain
               </Button>
             </div>
@@ -243,7 +243,7 @@ export default function Admin() {
                       <div>
                         <div className="flex items-center gap-3">
                           <h3 className="font-display text-lg text-white">{o.domain_name}</h3>
-                          {o.status === "new" && <span className="text-[10px] bg-gold text-black rounded-full px-2 py-0.5 font-bold uppercase">New</span>}
+                          {o.status === "new" && <span className="text-[10px] bg-gold text-white rounded-full px-2 py-0.5 font-bold uppercase">New</span>}
                         </div>
                         <p className="text-sm text-neutral-400 mt-1">{o.name} · {o.email}</p>
                         {o.offer_amount != null && (
@@ -254,7 +254,7 @@ export default function Admin() {
                       </div>
                       <div className="flex flex-col gap-2">
                         <a href={`mailto:${o.email}?subject=Re: ${o.domain_name}`} data-testid={`reply-${o.id}`}>
-                          <Button size="sm" className="bg-gold text-black hover:bg-gold-hover rounded-full w-full">
+                          <Button size="sm" className="bg-gold text-white hover:bg-gold-hover rounded-full w-full">
                             <Mail className="w-4 h-4 mr-1" /> Reply
                           </Button>
                         </a>
@@ -327,7 +327,7 @@ export default function Admin() {
               </div>
             </div>
             <DialogFooter>
-              <Button type="submit" disabled={saving} data-testid="form-submit" className="bg-gold text-black hover:bg-gold-hover font-semibold rounded-full w-full">
+              <Button type="submit" disabled={saving} data-testid="form-submit" className="bg-gold text-white hover:bg-gold-hover font-semibold rounded-full w-full">
                 {saving ? "Saving..." : editing ? "Update Domain" : "Add Domain"}
               </Button>
             </DialogFooter>

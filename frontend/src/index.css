@@ -8,8 +8,8 @@
   --pns-bg: #050505;
   --pns-surface: #121212;
   --pns-surface-hover: #1a1a1a;
-  --pns-gold: #d4af37;
-  --pns-gold-hover: #f1c40f;
+  --pns-gold: #2f6feb;
+  --pns-gold-hover: #4f8bff;
 }
 
 * {
@@ -35,7 +35,7 @@ body {
 
 ::selection {
   background: var(--pns-gold);
-  color: #050505;
+  color: #ffffff;
 }
 
 /* Scrollbar */
@@ -75,8 +75,8 @@ body {
 
 .grid-bg {
   background-image:
-    linear-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(47, 111, 235, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(47, 111, 235, 0.05) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
@@ -85,7 +85,7 @@ body {
 }
 
 .tag-chip {
-  border: 1px solid rgba(212, 175, 55, 0.25);
-  color: #d4af37;
-  background: rgba(212, 175, 55, 0.06);
+  border: 1px solid rgba(47, 111, 235, 0.3);
+  color: #6f9dff;
+  background: rgba(47, 111, 235, 0.08);
 }

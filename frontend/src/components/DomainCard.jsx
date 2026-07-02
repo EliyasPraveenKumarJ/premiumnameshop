@@ -53,7 +53,7 @@ export default function DomainCard({ domain, onRequest, index = 0 }) {
             size="sm"
             data-testid={`request-btn-${domain.name}`}
             onClick={() => onRequest(domain)}
-            className="bg-gold text-black hover:bg-gold-hover font-semibold rounded-full px-4"
+            className="bg-gold text-white hover:bg-gold-hover font-semibold rounded-full px-4"
           >
             {domain.price ? "Inquire" : "Make Offer"}
           </Button>

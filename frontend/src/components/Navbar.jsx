@@ -51,7 +51,7 @@ export default function Navbar() {
             <Button
               size="sm"
               data-testid="nav-browse-btn"
-              className="bg-gold text-black hover:bg-gold-hover font-semibold rounded-full px-5"
+              className="bg-gold text-white hover:bg-gold-hover font-semibold rounded-full px-5"
             >
               Browse Domains
             </Button>
