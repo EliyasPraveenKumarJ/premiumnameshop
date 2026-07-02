@@ -7,12 +7,22 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        display: ['Sora', 'sans-serif'],
+        sans: ['Manrope', 'sans-serif'],
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
       },
       colors: {
+        gold: {
+          DEFAULT: '#d4af37',
+          hover: '#f1c40f',
+        },
+        obsidian: '#050505',
+        surface: '#121212',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
