@@ -377,17 +377,10 @@ async def seed_domains():
 
 @app.on_event("startup")
 async def startup():
-    print("Testing MongoDB...")
-    print("MONGO_URL:", os.environ.get("MONGO_URL"))
-    print("DB_NAME:", os.environ.get("DB_NAME"))
-    result = await client.admin.command("ping")
-    print(result)
-
-    print("Server version:")
-    build = await client.admin.command("buildInfo")
-    print(build["version"])
-
-    print("Done")
+    await db.users.create_index("email", unique=True)
+    await db.domains.create_index("name")
+    await seed_admin()
+    await seed_domains()
 
 
 @app.on_event("shutdown")
