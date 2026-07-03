@@ -372,7 +372,8 @@ async def seed_domains():
 @app.on_event("startup")
 async def startup():
     print("Testing MongoDB...")
-
+    print("MONGO_URL:", os.environ.get("MONGO_URL"))
+    print("DB_NAME:", os.environ.get("DB_NAME"))
     result = await client.admin.command("ping")
     print(result)
 
